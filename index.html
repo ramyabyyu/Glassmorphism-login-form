@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <section>
+        <div class="form-container">
+            <h3>Login</h3>
+            <form>
+                <div class="form-input">
+                    <input type="text" required>
+                    <label>Username</label>
+                </div>
+                <div class="form-input">
+                    <input type="password" required class="password">
+                    <label>Password</label>
+                    <div class="show-pw" onclick="showPw()">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                </div>
+                <a href="#" class="forget">Forget Password ?</a>
+                <div class="footer">
+                    <button>Login</button>
+                    <span>Don't have an account ? <a href="#">Create one</a></span>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function showPw() {
+            const pw = document.querySelector('.password')
+            const icon = document.querySelector('i')
+
+            if (pw.type === "password") {
+                pw.type = "text"
+                icon.className = "fas fa-eye"
+            } else {
+                pw.type = "password"
+                icon.className = "fas fa-eye-slash"
+            }
+        }
+    </script>
+</body>
+</html>
